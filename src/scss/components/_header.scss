@@ -1,4 +1,28 @@
 .header {
+	border: 1px solid var(--grey-color);
 	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+	&__side {
+		&-left {
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__logo {
+		margin-right: 60px;
+	}
+	&__actions {
+		display: flex;
+		align-items: center;
+	}
+	&__button {
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
 	}
 }
