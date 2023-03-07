@@ -1,4 +1,94 @@
 .hero {
 	&__container {
+		padding-top: 40px;
+	}
+	&__path {
+		display: flex;
+	}
+	&__item {
+		color: var(--black-color);
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		position: relative;
+		&:last-child {
+			color: var(--text-grey-color);
+		}
+		&:not(:last-child) {
+			margin-right: 27px;
+			&::after {
+				content: "";
+				background: url("../img/right-arrow.svg");
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: -14px;
+				width: 7px;
+				height: 13px;
+			}
+		}
+	}
+	&__side {
+		&-left {
+			margin-top: 32px;
+			padding-top: 10px;
+			max-width: 846px;
+		}
+	}
+	&__title {
+		&-name {
+			font-weight: 600;
+			font-size: 20px;
+			line-height: 24px;
+			color: var(--black-color);
+			margin-top: 20px;
+			margin-bottom: 0;
+		}
+		&-docs {
+			margin-top: 50px;
+			margin-bottom: 0;
+		}
+	}
+	&__slide {
+		background: var(--white-color);
+		border: 1px solid #e0e0eb;
+		border-radius: 15px;
+		padding: 15px;
+		box-sizing: border-box;
+	}
+	&__slider {
+		margin-top: 25px;
+		z-index: 10;
+	}
+	&__btn {
+		background: var(--blue-color);
+		border-radius: 100px;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: background 0.3s ease-in;
+		&-prev {
+			transform: rotate(180deg);
+		}
+		&-disabled {
+			background: var(--white-color);
+			border: 1px solid var(--border-grey-color);
+			path {
+				stroke: var(--border-grey-color) !important;
+			}
+		}
+	}
+	&__navigation {
+		position: absolute;
+		z-index: 15;
+		top: 50%;
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+		transform: translateY(-50%);
+		display: flex;
+		justify-content: space-between;
 	}
 }
