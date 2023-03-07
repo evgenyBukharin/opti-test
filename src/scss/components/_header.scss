@@ -13,7 +13,7 @@
 			align-items: center;
 		}
 	}
-	&__logo {
+	&__link {
 		margin-right: 60px;
 	}
 	&__actions {
@@ -23,6 +23,9 @@
 	&__button {
 		&:not(:last-child) {
 			margin-right: 20px;
+		}
+		&-search {
+			max-height: 20px;
 		}
 	}
 }
