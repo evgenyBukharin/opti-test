@@ -1,0 +1,5 @@
+.burger {
+	@include burger;
+	--burger-height: 24px;
+	z-index: 1000;
+}

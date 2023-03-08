@@ -1,0 +1,51 @@
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 900;
+	transform: translateX(-100%);
+	background: var(--white-color);
+	padding: 20px;
+	transition: transform 0.4s ease-in-out;
+	&--active {
+		transform: translateX(0);
+	}
+	.nav {
+		display: block;
+		&__list {
+			display: flex;
+			flex-direction: column;
+		}
+		&__item {
+			margin-right: 0;
+			&:not(:last-child) {
+				margin-bottom: 26px;
+			}
+		}
+		&__link {
+			font-size: 20px;
+			&-active {
+				font-weight: 600;
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+	.header {
+		&__actions {
+			display: flex;
+			row-gap: 20px;
+			flex-wrap: wrap;
+		}
+		&__button {
+			&-search {
+				order: 3;
+				margin-right: 0;
+				margin-left: 20px;
+			}
+		}
+	}
+}

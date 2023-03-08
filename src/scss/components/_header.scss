@@ -27,6 +27,52 @@
 		}
 		&-search {
 			max-height: 20px;
+			min-height: 20px;
+			min-width: 20px;
+		}
+	}
+	&__logo {
+		min-width: 42px;
+		min-height: 46px;
+	}
+	&__burger {
+		display: none;
+	}
+}
+
+@media (max-width: 1024px) {
+	.header {
+		&__container {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		&__actions {
+			margin-top: 20px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.header {
+		&__link {
+			margin-right: 20px;
+		}
+	}
+}
+
+@media (max-width: 590px) {
+	.header {
+		&__container {
+			justify-content: space-between;
+		}
+		&__actions {
+			display: none;
+		}
+		&__link {
+			margin-right: 0;
+		}
+		&__burger {
+			display: inline-block;
 		}
 	}
 }
