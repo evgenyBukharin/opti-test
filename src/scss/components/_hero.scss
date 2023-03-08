@@ -1,6 +1,11 @@
 .hero {
 	&__container {
 		padding-top: 40px;
+		&-select {
+			position: relative;
+			max-width: 413px;
+			margin-top: 30px;
+		}
 	}
 	&__path {
 		display: flex;
@@ -150,6 +155,13 @@
 		&-location {
 			margin-right: 10px;
 		}
+		&-select-arrow {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 15px;
+			pointer-events: none;
+		}
 	}
 	&__location {
 		color: var(--text-grey-color);
@@ -164,5 +176,19 @@
 	&__social {
 		margin-top: 20px;
 		display: flex;
+	}
+	&__select {
+		outline: none;
+		border: 1px solid var(--border-grey-color);
+		background: var(--white-color);
+		padding: 14px 15px;
+		border-radius: 100px;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 22px;
+		color: var(--black-color);
+		width: 100%;
+		appearance: none;
+		position: relative;
 	}
 }
