@@ -54,6 +54,7 @@
 		grid-template-columns: repeat(8, 1fr);
 		grid-template-rows: 40px;
 		gap: 20px;
+		height: fit-content;
 	}
 	&__case {
 		grid-column: 4 span;
@@ -92,5 +93,36 @@
 	&__info {
 		display: flex;
 		flex-direction: column;
+	}
+}
+
+@media (max-width: 768px) {
+	.blog {
+		&__articles {
+			grid-column: 5 span;
+		}
+		&__cases {
+			grid-column: 7 span;
+		}
+		&__case {
+			grid-column: 8 span;
+		}
+		&__date {
+			margin-left: 12px;
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	.blog {
+		&__container {
+			row-gap: 36px;
+		}
+		&__articles {
+			grid-column: 12 span;
+		}
+		&__cases {
+			grid-column: 12 span;
+		}
 	}
 }
